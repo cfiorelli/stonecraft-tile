@@ -1,0 +1,160 @@
+/* ----- Base Rules ------ */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ----- Layout Rules ------ */
+
+.wrapper {
+  min-height: calc(100vh - 30px);
+}
+
+.main-header {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  background: linear-gradient(to top, #fff, transparent 80%),
+                    url('../../img/floor/f2.jpg');
+  background-size: cover;
+  background-position: center;
+  line-height: 200px;
+  text-align: center;
+  text-shadow: 2.5px 2.5px 2.5px #000;
+  font-size: 2.25em;
+  color: #fff;
+}
+
+.main-content {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
+}
+
+/*.page-nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page-nav a {
+  padding: 5px 0;
+  color: #000;
+}*/
+
+.about {
+  margin-bottom: 5px;
+  font-size: .75em;
+}
+
+.middot {
+  margin: 0;
+  font-size: 2em;
+}
+
+.categories {
+  width: 100%;
+}
+
+.category {
+  width: 100%;
+
+}
+
+.category-header {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  line-height: 150px;
+  color: #fff;
+}
+
+.gallery-reveal {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.test-wrap {
+  display: none;
+  width: 100%;
+  height: 55px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 10px;
+}
+
+.img-slider {
+  /*display: none;*/
+  width: 850px;
+}
+
+ .image {
+  max-width: 80px;
+  vertical-align: top;
+}
+
+.contact-header {
+  margin: 40px 0 10px;
+}
+
+.contact-method {
+  padding: 5px 0 5px;
+}
+
+footer {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#kitchen {
+  background-image: url('../../img/kitchen/k1.jpg');
+}
+
+#bath {
+  background-image: url('../../img/bath/b32.jpg');
+}
+
+#floor {
+  background-image: url('../../img/floor/f17.jpg');
+}
+
+#fireplace {
+  background-image: url('../../img/fireplace/fp5.jpg');
+}
+
+/* ----- JavaScript Rules ------ */
+
+
+
+/* ----- DRY Rules ------ */
+
+
+/* ----- Media Queries ------ */
+
+		/* ----- Orientation Breakpoints ------ */
+
+
+
+		/* ----- Major Breakpoints ------ */
+
+
+
+		/* ----- Minor Breakpoints ------ */
+
+
