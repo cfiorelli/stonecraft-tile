@@ -1,9 +1,5 @@
 /* ----- Base Rules ------ */
 
-body {
-  box-sizing: border-box;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -18,18 +14,17 @@ a {
   display: none;
 }
 
-
 /* ----- Layout Rules ------ */
 
 .wrapper {
-  min-height: calc(100vh - 30px);
-  /*Sticks footer to bottom of page*/
+  min-height: calc(100vh - 30px); /* Sticks footer to bottom of page */
 }
 
 .main-header {
   width: 100%;
   height: 200px;
   margin: 0;
+  background: -webkit-linear-gradient(bottom, #fff, transparent 80%), url('../../img/floor/f2.jpg');
   background: linear-gradient(to top, #fff, transparent 80%), url('../../img/floor/f2.jpg');
   background-size: cover;
   background-position: center;
@@ -48,19 +43,9 @@ a {
 
 .cursive {
   font-family: 'Dancing Script', cursive;
+  border-left: 5px solid #fff;
+  padding-left: 20px;
 }
-
-
-/*.page-nav {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.page-nav a {
-  padding: 5px 0;
-  color: #000;
-}*/
 
 .about {
   margin: 0 auto 5px;
@@ -82,12 +67,32 @@ a {
 }
 
 .category-header {
+  position: relative;
   width: 100%;
   height: 150px;
   background-size: cover;
   background-position: center;
   line-height: 150px;
   color: #fff;
+}
+
+.category-header-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+  opacity: .8;
+  font-size: .5em;
+}
+
+.overlay-content {
+  margin: 60px 20px 0;
+  font-size: 1em;
+  line-height: normal;
 }
 
 .gallery-reveal {
@@ -100,7 +105,7 @@ a {
 
 .gallery-window {
   display: none;
-  width: 80%;
+  width: 75%;
   height: 76px;
   margin: 10px auto 0;
   overflow-x: scroll;
@@ -108,12 +113,7 @@ a {
 }
 
 .img-slider {
-  width: 840px;
-  overflow: hidden;
-}
-
-.slide {
-  margin: 0;
+  overflow-x: hidden;
 }
 
 .image {
@@ -152,19 +152,11 @@ footer {
   background-image: url('../../img/fireplace/fp5.jpg');
 }
 
-
 /* ----- Media Queries ------ */
 
-
-/* ----- Orientation Breakpoints ------ */
-
-
-/* ----- Major Breakpoints ------ */
+    /* ----- Major Breakpoints ------ */
 
 @media (min-width: 680px) {
-  ::-webkit-scrollbar {
-    display: initial;
-  }
   .main-header {
     height: 400px;
     line-height: 400px;
@@ -189,6 +181,9 @@ footer {
     line-height: 250px;
     font-size: 2.25em;
   }
+  .overlay-content {
+    margin: 100px 30px 0;
+  }
   .gallery-reveal {
     height: 40px;
     margin: 0 auto 20px;
@@ -199,13 +194,6 @@ footer {
   .gallery-window {
     width: 80%;
     height: 130px;
-  }
-  .img-slider {
-    /*display: none;*/
-    width: 1590px;
-  }
-  .slide {
-    margin: 2.5px;
   }
   .image {
     max-width: 150px;
@@ -233,6 +221,9 @@ footer {
     line-height: 400px;
     font-size: 3.25em;
   }
+  .overlay-content {
+    margin: 180px 30px 0;
+  }
   .gallery-reveal {
     height: 40px;
     margin: 40px auto;
@@ -242,13 +233,6 @@ footer {
   .gallery-window {
     width: 80%;
     height: 140px;
-  }
-  .img-slider {
-    /*display: none;*/
-    width: 1690px;
-  }
-  .slide {
-    margin: 2.5px;
   }
   .image {
     max-width: 160px;
@@ -261,9 +245,6 @@ footer {
     display: inline-block;
     padding: 3px 10px;
   }
-}
-
-
 }
 
 /* ----- Minor Breakpoints ------ */

@@ -10,19 +10,28 @@ $('.slide').on('click', function(evt) {
   $(this).parent().parent().siblings('.category-header').css('background-image', 'url(' + $newImage + ')');
 });
 
-// Smooth Scrolling for same=page anchors
-// $(function() {
-//   $('a[href*="#"]:not([href="#"])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html, body').animate({
-//           scrollTop: target.offset().top
-//         }, 1000);
-//         return false;
-//       }
-//     }
-//   });
-// });
+// Show category overlay on hover
+$('.category-header').mouseenter(function(){
+   $(this).children('.category-header-overlay').fadeIn('slow');
+}).mouseleave(function(){
+  $(this).children('.category-header-overlay').fadeOut('slow');
+});
+
+// Calculate current image size
+var $pureImageSize = parseInt($('.image').css('max-width').replace('px', ""));
+
+// Account for default left/right margins
+var $ImageSize = $pureImageSize + 4;
+
+// # of images in each image slider
+var $kitchenSliderLength = $('#kitchen-slider .slide').length;
+var $bathSliderLength = $('#bath-slider .slide').length;
+var $floorSliderLength = $('#floor-slider .slide').length;
+var $fireplaceSliderLength = $('#fireplace-slider .slide').length;
+
+// Dynamically set each image slider's length, depending on current # of images
+$('#kitchen-slider').css('width', ($ImageSize * $kitchenSliderLength) + 'px');
+$('#bath-slider').css('width', ($ImageSize * $bathSliderLength) + 'px');
+$('#floor-slider').css('width', ($ImageSize * $floorSliderLength) + 'px');
+$('#fireplace-slider').css('width', ($ImageSize * $fireplaceSliderLength) + 'px');
 
