@@ -1,6 +1,6 @@
 // Show gallery on click
 $('.gallery-reveal').on('click', function(){
-	$(this).siblings('.test-wrap').slideToggle();
+	$(this).siblings('.gallery-window').slideToggle();
 });
 
 // Change category header background clicked gallery image
@@ -25,3 +25,4 @@ $('.slide').on('click', function(evt) {
 //     }
 //   });
 // });
+
