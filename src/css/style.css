@@ -17,7 +17,8 @@ a {
 /* ----- Layout Rules ------ */
 
 .wrapper {
-  min-height: calc(100vh - 30px); /* Sticks footer to bottom of page */
+  min-height: calc(100vh - 30px);
+  /* Sticks footer to bottom of page */
 }
 
 .main-header {
@@ -25,11 +26,9 @@ a {
   height: 200px;
   margin: 0;
   background: -webkit-linear-gradient(bottom, #fff, transparent 80%), url('../../img/floor/f2.jpg');
+  background: -o-linear-gradient(bottom, #fff, transparent 80%), url('../../img/floor/f2.jpg');
   background: linear-gradient(to top, #fff, transparent 80%), url('../../img/floor/f2.jpg');
-  background-size: cover;
-  background-position: center;
   line-height: 200px;
-  text-align: center;
   text-shadow: 2.5px 2.5px 2.5px #000;
   font-size: 2.25em;
   color: #fff;
@@ -38,7 +37,6 @@ a {
 .main-content {
   max-width: 80%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .cursive {
@@ -70,8 +68,6 @@ a {
   position: relative;
   width: 100%;
   height: 150px;
-  background-size: cover;
-  background-position: center;
   line-height: 150px;
   color: #fff;
 }
@@ -129,10 +125,9 @@ a {
   padding: 5px 0 5px;
 }
 
-footer {
+.main-footer {
   height: 30px;
   margin-top: 30px;
-  text-align: center;
   line-height: 30px;
 }
 
@@ -152,7 +147,27 @@ footer {
   background-image: url('../../img/fireplace/fp5.jpg');
 }
 
+
+/* ----- Pseudo Classes ------ */
+
+.gallery-reveal:hover {
+  cursor: pointer;
+}
+
+/* ----- OOCSS Styles ------ */
+
+.cntr-txt {
+  text-align: center;
+}
+
+.bkgrnd-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+
 /* ----- Media Queries ------ */
+
 
     /* ----- Major Breakpoints ------ */
 
@@ -160,9 +175,7 @@ footer {
   .main-header {
     height: 400px;
     line-height: 400px;
-    text-shadow: 2.5px 2.5px 2.5px #000;
     font-size: 4em;
-    color: #fff;
   }
   .about-header {
     margin-bottom: 25px;
@@ -187,7 +200,6 @@ footer {
   .gallery-reveal {
     height: 40px;
     margin: 0 auto 20px;
-    border-bottom: 1px solid #000;
     line-height: 40px;
     font-size: 1.25em;
   }
@@ -197,7 +209,6 @@ footer {
   }
   .image {
     max-width: 150px;
-    vertical-align: top;
   }
 }
 
@@ -225,18 +236,14 @@ footer {
     margin: 180px 30px 0;
   }
   .gallery-reveal {
-    height: 40px;
     margin: 40px auto;
-    line-height: 40px;
     font-size: 1.5em;
   }
   .gallery-window {
-    width: 80%;
     height: 140px;
   }
   .image {
     max-width: 160px;
-    vertical-align: top;
   }
   .contact-method:not(:last-child) {
     border-right: 1px solid #000;
@@ -246,5 +253,3 @@ footer {
     padding: 3px 10px;
   }
 }
-
-/* ----- Minor Breakpoints ------ */
